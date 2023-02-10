@@ -66,6 +66,8 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 !function(e,s){"function"==typeof define&&define.amd?define([],function(){return s()}):"object"==typeof exports?module.exports=s():s()}(0,function(){!function(e,s,n,t){"use strict";var a={pager:!1},o=function(s){return this.core=e(s).data("lightGallery"),this.$el=e(s),this.core.s=e.extend({},a,this.core.s),this.core.s.pager&&this.core.$items.length>1&&this.init(),this};o.prototype.init=function(){var s,n,t,a=this,o="";if(a.core.$outer.find(".lg").append('<div class="lg-pager-outer"></div>'),a.core.s.dynamic)for(var r=0;r<a.core.s.dynamicEl.length;r++)o+='<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="'+a.core.s.dynamicEl[r].thumb+'" /></div></span>';else a.core.$items.each(function(){a.core.s.exThumbImage?o+='<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="'+e(this).attr(a.core.s.exThumbImage)+'" /></div></span>':o+='<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="'+e(this).find("img").attr("src")+'" /></div></span>'});(n=a.core.$outer.find(".lg-pager-outer")).html(o),(s=a.core.$outer.find(".lg-pager-cont")).on("click.lg touchend.lg",function(){var s=e(this);a.core.index=s.index(),a.core.slide(a.core.index,!1,!1)}),n.on("mouseover.lg",function(){clearTimeout(t),n.addClass("lg-pager-hover")}),n.on("mouseout.lg",function(){t=setTimeout(function(){n.removeClass("lg-pager-hover")})}),a.core.$el.on("onBeforeSlide.lg.tm",function(e,n,t){s.removeClass("lg-pager-active"),s.eq(t).addClass("lg-pager-active")})},o.prototype.destroy=function(){},e.fn.lightGallery.modules.pager=o}(jQuery,window,document)});
 
 $(document).ready(function(){
+	
+
 	//ANCORA
 	$(".link-scroll").click(function(){
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 700);
@@ -95,22 +97,16 @@ $(document).ready(function(){
 		hash: false,
 	});
 
+	
 	//CAROUSEL CLIENTS
+	
 	$('.carousel-clients').owlCarousel({
 		loop: true,
 		responsive:{
-			0:{
-				items: 2,
-			},
-			769:{
-				items: 3,
-			},
-			991:{
-				items: 4,
-			},
-			1200:{
-				items: 5,
-			},
+			0:{items: 2,},
+			769:{items: 3,},
+			991:{items: 4,},
+			1200:{items: 5,},
 		},
 		dotsSpeed: 1700,
 		navSpeed: 1700,
@@ -120,6 +116,7 @@ $(document).ready(function(){
 		margin: 30,
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 	});
+
 
 	$(".open-modal").click(function(){
 		$(".wrap-modal").fadeIn();
@@ -143,8 +140,18 @@ $(document).ready(function(){
 		$("body").removeClass("overflow");
 		return false;
 	});
-
 	
-
+	showHideCarousel();
+	window.addEventListener('resize',function(){showHideCarousel();});
+	function showHideCarousel(){
+		var largura = window.innerWidth;
+		if (largura < 991) {
+			document.querySelector("#listaClientesCrousel").classList.remove('d-none');
+			document.querySelector("#listaClientesFull").classList.add('d-none');
+		}else{
+			document.querySelector("#listaClientesCrousel").classList.add('d-none');
+			document.querySelector("#listaClientesFull").classList.remove('d-none');
+		}
+	}
 	
 });
