@@ -216,7 +216,6 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 .home-banner .box-text h1 strong {color: #2FE0F1; font-weight: 600;}
 .home-banner .box-text p {font-size: 18px; line-height: 30px; color: #FFF; margin-bottom: 30px;}
 .home-banner .div-img{ margin-top: 100px;}
-.home-banner img {width: 650px;}
 .home-topics{
 	padding: 139px 0px 259px 0px;
 	display: grid;
@@ -244,6 +243,7 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 
 .home-about{
 	background-color: #053d92;
+	text-shadow: 1px 1px 1px #003D63;
 }
 .home-about .content {
 	max-width: 1680px;
