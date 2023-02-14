@@ -114,7 +114,7 @@ $(document).ready(function(){
 		dots: false,
 		nav: true,
 		margin: 30,
-		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+		navText: ["<img class='arrowCarousel' src='images/icones/arrow-left.svg'></i>", "<img class='arrowCarousel' src='images/icones/arrow-right.svg'></i>"]
 	});
 
 
@@ -145,7 +145,7 @@ $(document).ready(function(){
 	window.addEventListener('resize',function(){showHideCarousel();});
 	function showHideCarousel(){
 		var largura = window.innerWidth;
-		if (largura < 991) {
+		if (largura < 1201) {
 			document.querySelector("#listaClientesCrousel").classList.remove('d-none');
 			document.querySelector("#listaClientesFull").classList.add('d-none');
 		}else{
