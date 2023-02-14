@@ -151,7 +151,7 @@ p strong {
 	padding: 0;	
 }
 header {
-   padding: 20px 0;
+	padding: 37px 0 18px 0;
 	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
 	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
 	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
@@ -169,11 +169,14 @@ header nav ul li {
 }
 header nav ul li a {
 	font-size: 15px;
-	line-height: 45px;
+	line-height: 30px;
 	display: table;
 }
 header nav ul li a:hover {
    color: #2FE0F1
+}
+.active{
+	border-bottom: 2.5px solid #000;;
 }
 
 
@@ -210,12 +213,60 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 .pointer{cursor: pointer;}
 .text-lime{font-weight: 700;font-size: 16px;line-height: 24px;color: #07DB00;}
 .img-whatsapp-top{margin-top: -5px;margin-right: 10px;}
-.home-banner {border-bottom: 20px solid #053D92;background-image: url("../images/hero-bg.png");background-size: cover;background-position:bottom;height: 615px;}
-.home-banner .box-text {display: table; padding-top: 10px;}
-.home-banner .box-text h1 {font-size: 55px; font-weight: 300; line-height: 65px; display: table; color: #fff; margin-bottom: 20px;}
-.home-banner .box-text h1 strong {color: #2FE0F1; font-weight: 600;}
-.home-banner .box-text p {font-size: 18px; line-height: 30px; color: #FFF; margin-bottom: 30px;}
-.home-banner .div-img{ margin-top: 100px;}
+
+
+
+
+.home-banner {
+	height: 704px;
+	background-image: url("../images/hero-bg.png");
+	background-size: cover;
+	border-bottom: 19px solid #053D92;
+	position: relative;
+}
+.home-banner .container {
+	position: relative;
+}
+
+.home-banner .container .box-text {display: table; padding-top: 10px;}
+.home-banner .container h1 {	
+	font-family: poppins;
+	font-weight: 700;
+	font-size: 70px;
+	color:#2FE0F1;
+	line-height: 88.2px;
+	margin-top: 124px;
+}
+.home-banner .container h2 {
+	font-family: poppins;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 55.98px;
+	color:#FFF;
+}
+.home-banner .container p{
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 27px;
+	color: #FFFFFF;
+	padding: 22px 0px 55px 0px;
+}
+.home-banner .container img{
+	position: absolute;
+	right:0px;
+	top:111px;
+	width: 594px;
+}
+
+
+
+
+
+
+
+
 .home-topics{
 	padding: 139px 0px 259px 0px;
 	display: grid;
@@ -224,10 +275,29 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 	'instalacao manutencao engenharia'
 	'tecnologia tecnologia tecnologia';
 }
-.home-topics h2:nth-child(1){grid-area: title;margin: 0px 0px 70px 0px;font-weight: 600;font-size: 50px;color: #003D63;text-align: center;}
-.home-topics div:nth-child(2){grid-area: instalacao;text-align: center;}
-.home-topics div:nth-child(3){grid-area: manutencao;text-align: center;}
-.home-topics div:nth-child(4){grid-area: engenharia;text-align: center;}
+.home-topics h2:nth-child(1){grid-area: title;margin: 0px 0px 76px 0px;font-weight: 600;font-size: 50px;color: #003D63;text-align: center;padding:7px;}
+.home-topics div:nth-child(2){
+	grid-area: instalacao;
+	text-align: center;
+	padding-top:41px;
+}
+.home-topics div:nth-child(3){
+	grid-area: manutencao;
+	text-align: center;
+	padding-top:41px;
+}
+.home-topics div:nth-child(4){
+	grid-area: engenharia;
+	text-align: center;
+	padding-top:41px;
+}
+.home-topics h3{
+	margin-top: 18px;
+	font-size:24px;
+	font-weight: 500;
+	line-height: 36px;
+}
+
 .home-topics div:nth-child(5){
 	grid-area: tecnologia;
 	background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,linear-gradient(90deg, #053d92 10%, transparent 10%);
@@ -241,21 +311,23 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 .home-topics div:nth-child(5) ul{align-self: center;}
 
 
-.home-about{
-	background-color: #053d92;
-	text-shadow: 1px 1px 1px #003D63;
+
+
+
+
+.home-about {
+    background: #053d92;
 }
-.home-about .content {
-	max-width: 1680px;
-	margin: 0 auto;;
-	display: grid;
-	grid-template-columns: 50% 50%;
+.home-about img {
+    float: right;
 }
-.home-about .div-sobre{
+
+.home-about .box-text {
 	Width: 567px;
-	Height: 448px;
+	Height: 540px;
 	align-self: center;
 }
+
 .home-about h2 {
 	font-weight: 600;
 	font-size: 50px;
@@ -265,6 +337,11 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 	font-weight: 400;
 	font-size: 18px;
 	color: #FFFFFF;
+	margin-top: 17px;;
+	margin-bottom: 27px;;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 27px;
 }
 .home-about a {
 	margin-top: 70px;
@@ -273,8 +350,31 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 
 
 
-.home-clients {padding: 80px 0;}
-.home-clients h2 {display: table; width: 100%; text-align: center; font-size: 40px; line-height: 50px; font-weight: 600; color: #003D63; margin-bottom: 70px;}
+
+
+.home-clients {
+	height:814px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.home-clients .container{
+	width:1043px;
+	height:589.63px;
+	vertical-align: middle;
+}
+.home-clients h2 {
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 50px;
+	 line-height: 75px;
+	 color: #003D63;
+	 margin-bottom: 91;
+}
+
+
+
 .home-clients img {display: table; max-width: 100%; text-align: center;}
 .home-clients .carousel-clients {padding: 0 50px; position: relative; margin-bottom: 70px;}
 .home-clients .carousel-clients .owl-dots {display: none;}
@@ -283,7 +383,10 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 .home-clients .carousel-clients .owl-nav button.owl-next {float: right;}
 .home-clients a {display: table; margin: 0 auto;}
 
-.home-cta {padding: 150px 0; background: url(../images/bg-loja-mc.webp) center center no-repeat; background-size: cover;}
+
+
+
+.home-cta {padding: 267px 0; background: url(../images/bg-loja-mc.webp) center center no-repeat; background-size: cover;}
 .home-cta h2 {display: table; width: 100%; text-align: center; font-size: 60px; line-height: 70px; font-weight: 600; color: #FFF; margin-bottom: 60px}
 .home-cta a {margin: 0 auto;}
 
@@ -294,17 +397,17 @@ header nav ul li img{border-radius: 50px;padding: 0px;}
 .portifolio-list li{text-align: left !important;}
 
 footer {padding: 80px 0 0; background:#D9D9D9;}
-footer .col-footer {display: table; width: 100%;}
+footer .col-footer {display: table; width: 100%; padding-bottom: 51px;}
 footer .col-footer .title {display: table; color: #000; font-weight: 600; color: #000; font-size: 25px; margin-bottom: 25px;}
 footer .col-footer ul, footer .col-footer ul li, footer .col-footer ul li a {display: table;}
 footer .col-footer ul li {margin-bottom: 10px;}
 footer .col-footer ul li a {color: #000; font-size: 16px; transition: 0.2s;}
 footer .col-footer ul li a:hover {color: #1658bB;}
 
-footer .copy {background: #000;padding: 35px 0; margin-top: 80px; width: 100%;}
+footer .copy {background: #000;padding: 28px 0; margin-top: 80px; width: 100%;}
 footer .copy div {font-size: 16px; color: #FFF;}
 
-.line{height: 0px;width: 87px;position: absolute;left: 2.93%;right: 85.89%;top: 16.28%;bottom: 83.72%;border-radius: 2px;border: 3px solid #000000;margin: 12px 0px 0px 0px;}
+.line{height: 0px;width: 87px;position: absolute;left: 2.93%;right: 85.89%;top: 16.28%;bottom: 83.72%;border-radius: 2px;border: 2px solid #000000;margin: 0px 0px 0px 0px;}
 
 .wrap-modal {position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999; display: none;}
 .wrap-modal.active {display: block}
